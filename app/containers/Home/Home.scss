@@ -1,0 +1,141 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  background: #f0f0f0;
+}
+a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+  color: #0f0f0f;
+  &:hover {
+    color: tomato;
+  }
+}
+input, button {
+  border: 0;
+  background: 0;
+  -webkit-appearance: none;
+}
+#search-info {
+  padding: 10px;
+  background: #fff;
+  box-shadow: inset -2px 0px 2px 0px rgba(0,0,0,.2);
+  + button {
+    background: tomato;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+    &:hover {
+      background: darken(tomato, 20%);
+    }
+  }
+}
+.homepage {
+  text-align: center;
+  display: block;
+  width: 100%;
+  max-width: 1180px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+
+.other-artists, .related-artists{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    font-size: 13px;
+  }
+}
+.related-artists {
+  li:not(:last-child) a{
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+  li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: .3s all ease-in-out;
+    &:hover {
+      background: darken(#f0f0f0, 10%);
+      //color: #fff;
+      border-bottom: 1px solid tomato;
+    }
+  }
+}
+.other-artists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.song-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  audio {
+    max-width: 100%;
+  }
+  a {
+    padding: 5px 0;
+    display: block;
+    line-height: 1.2em;
+    font-size: 16px;
+    text-align: center;
+  }
+  li {
+    flex-basis: calc(50% - 20px);
+        margin: 10px 0;
+    @media(min-width: 880px){
+          flex-basis: calc(25% - 20px);
+    }
+
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+.flex-parent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+  @media(min-width: 880px){
+      flex-direction: row;
+  }
+
+
+}
+.three-four-box {
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-betwen;
+  text-align: center;
+  @media(min-width: 880px){
+      flex-basis: calc(80% - 20px);
+  }
+
+}
+.one-four-box {
+  flex-basis: auto;
+  text-align: center;
+  @media(min-width: 880px){
+    text-align: left;
+      flex-basis: calc(20% - 20px);
+  }
+}
